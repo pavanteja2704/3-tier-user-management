@@ -1,3 +1,8 @@
+we need to create mysql server 
+we need to create user 
+we need to create databases
+now we have to pass the mysql ip ,user name , paaswd , database name in config.py
+
 git clone https://github.com/pavanteja2704/3-tier-user-management.git
 
 Flask 
