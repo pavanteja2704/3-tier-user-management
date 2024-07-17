@@ -1,3 +1,26 @@
+git clone https://github.com/pavanteja2704/3-tier-user-management.git
+
 Flask 
+
+#you need to run this in terminal or ssh when if you got error
+
 mysql-connector-python
+pip install mysql-connector-python
+pip3 install mysql-connector-python
+
 bcrypt
+pip install bcrypt
+pip3 install bcrypt
+
+python app.py
+we will get ip so we can browser it on internet
+
+gcloud sql connect mysqldb --user=appuser --quiet
+or 
+mysql -h <your mysql ip> -u <your username > -p
+
+SHOW DATABASES;
+USE appdb;
+SHOW TABLES;
+DESCRIBE user;
+SELECT * FROM user;
