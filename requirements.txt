@@ -4,18 +4,16 @@ we need to create databases
 now we have to pass the mysql ip ,user name , paaswd , database name in config.py
 
 git clone https://github.com/pavanteja2704/3-tier-user-management.git
+
 #pip install
 sudo apt update
-
 sudo apt install python3-pip
-
 pip3 --version
-sudo pip3 install flask
-
-
-Flask 
 
 #you need to run this in terminal or ssh when if you got error
+Flask 
+pip install flask
+pip3 install flask
 
 mysql-connector-python
 pip install mysql-connector-python
