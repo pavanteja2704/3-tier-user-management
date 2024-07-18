@@ -1,0 +1,122 @@
+mysql -h 34.132.216.126 -u root -p
+
+
+sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
+
+sudo yum install mysql-server -y
+sudo systemctl start mysqld
+sudo systemctl enable mysqld
+sudo grep 'temporary password' /vr/log/mysqld.log
+mysql -u root -p
+
+
+CNy,o0Hx@A7pB=-L
+
+appuser
+
+git clone https://github.com/vishal-bulbule/3-tier-user-management-app.git
+pip install mysql-connector-python
+pip3 install mysql-connector-python
+pip install bcrypt
+pip3 install bcrypt
+python app.py
+gcloud sql connect mysqldb --user=appuser --quiet
+SHOW DATABASES;
+USE appdb;
+SHOW TABLES;
+
+commands to install mysql server:
+sudo apt update
+sudo apt install mysql-server
+Access MySQL:
+sudo mysql -u root -p
+
+Identify MySQL Instance Connection Details
+
+Host: The IP address or hostname of the MySQL instance.
+Port: Default MySQL port is 3306.
+Database Name: If connecting to a specific database.
+Username: MySQL username with appropriate permissions.
+Password: Password for the MySQL username.
+Connect from your Virtual Instance:
+mysql -h <mysql_host> -u <mysql_user> -p
+
+Troubleshooting
+If you encounter issues connecting:
+
+Firewall Rules: Ensure that your MySQL instance allows incoming connections on port 3306 from the IP address of your VM instance. You can configure this in the GCP Console under VPC network > Firewall rules.
+
+Credentials: Double-check your MySQL username and password.
+
+Network Connectivity: Verify that your VM instance has network connectivity to your MySQL instance. You can test this using tools like ping or telnet to check if the MySQL port (default 3306) is accessible.
+
+how to clean up pending tasks in cloud sql in gcp:
+Console:
+
+Go to the Google Cloud Console.
+Navigate to "SQL" in the left-hand menu.
+Select your Cloud SQL instance to view its details.
+Under "Operations", look for any pending operations or tasks.
+
+gcloud sql operations list --instance=[INSTANCE_NAME]
+
+Cancel Pending Operations
+If you identify any pending operations that you want to cancel:
+
+Console:
+
+Click on the operation to view details.
+Click "Cancel" to stop the operation.
+
+gcloud sql operations cancel [OPERATION_ID] --instance=[INSTANCE_NAME]
+
+
+git clone https://github.com/vishal-bulbule/3-tier-user-management-app.git
+pip install mysql-connector-python
+pip3 install mysql-connector-python
+pip install bcrypt
+pip3 install bcrypt
+python app.py
+gcloud sql connect mysqldb --user=appuser --quiet
+SHOW DATABASES;
+USE appdb;
+SHOW TABLES;
+DESCRIBE user;
+SELECT * FROM user;
+
+
+
+
+
+
+
+
+
+
+
+DESCRIBE user;
+SELECT * FROM user;
+CREATE USER 'UMA' IDENTIFIED BY 'UMA123';
+GRANT SELECT,INSERT,UPDATE,DELETE ON mysqldb.* TO 'UMA';
+REVOKE SELECT ON database_name.table_name FROM 'username'@'%';
+
+
+backup process:
+gcloud sql backups create --instance {INSTANCE_NAME] --location [REGION]
+
+restoration:
+gcloud sql backups restore [BACKUP_ID] --restore-instance=[INSTANCE_NAME]
+
+gcloud sql backups list --instance=mysqldb
+gcloud sql backups restore 1721199680293 --restore-instance=mysqldb
+
+
+patching:
+gcloud sql instances list
+gcloud sql instances patch  mysqldb
+
+monitor the update
+gcloud sql instances describe mysqldb
+
+
+
